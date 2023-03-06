@@ -44,7 +44,7 @@
 	let windowHeight = 0;
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} />
+<svelte:window bind:outerWidth={windowWidth} bind:outerHeight={windowHeight} />
 
 <div
 	class="userWindow absolute inline-block w-[500px] h-[400px] m-5 p-2 rounded-lg bg-white shadow-lg shadow-black"
