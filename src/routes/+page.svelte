@@ -93,7 +93,7 @@
 		});
 		// reset the total number of windows open
 		totalWindowsOpen.set(0);
-		
+
 		spawnDialogBox("Shutting down...", "Shutting down");
 
 		// reset the dropdowns
@@ -119,7 +119,6 @@
 			document.body.appendChild(blackScreen);
 		}, 5000);
 		// add the div to the screen
-		
 	}
 
 	let options: DragOptions = {
@@ -174,7 +173,7 @@
 					<!-- create a window on click -->
 					<button
 						class="block w-full px-4 py-2 hover:bg-gray-100"
-						on:click={() => spawnWindow("about", "About Me")}
+						on:click={() => spawnWindow("about", "about me")}
 						>open</button
 					>
 					<button
@@ -324,7 +323,11 @@ height: calc(100vh - 40px);"
 		use:tap={{ timeframe: 300 }}
 		on:tap={() => spawnWindow("drawing", "drawing")}
 	>
-		<img src="images/drawing.png" alt="drawing" class="w-16 h-16 m-auto" />
+		<img
+			src="images/drawing.png"
+			alt="drawing"
+			class="w-16 h-16 m-auto grayscale"
+		/>
 		<p class="bg-white text-center text-sm mt-2">drawing</p>
 	</button>
 	<button
@@ -337,7 +340,7 @@ height: calc(100vh - 40px);"
 		<img
 			src="images/mountain.png"
 			alt="about me"
-			class="w-16 h-16 m-auto"
+			class="w-16 h-16 m-auto grayscale"
 		/>
 		<p class="bg-white text-center text-sm mt-2">about me</p>
 	</button>
@@ -351,8 +354,22 @@ height: calc(100vh - 40px);"
 		<img
 			src="images/contact.png"
 			alt="contact me"
-			class="w-16 h-16 m-auto"
+			class="w-16 h-16 m-auto grayscale"
 		/>
 		<p class="bg-white text-center text-sm mt-2">contact me</p>
+	</button>
+	<button
+		class="m-5"
+		use:draggable={{ axis: "both", bounds: "parent" }}
+		on:dblclick={() => spawnWindow("https://kazwire.com/", "kazwire")}
+		use:tap={{ timeframe: 300 }}
+		on:tap={() => spawnWindow("https://kazwire.com/", "kazwire")}
+	>
+		<img
+			src="images/kazwire.png"
+			alt="kazwire"
+			class="w-16 h-16 m-auto grayscale bg-white"
+		/>
+		<p class="bg-white text-center text-sm mt-2">kazwire (project)</p>
 	</button>
 </div>
