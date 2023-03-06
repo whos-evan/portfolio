@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+    @font-face {
+        font-family: 'Pixeloid';
+        src: local('Pixeloid'), local('pixeloid'), url('/fonts/PixeloidSans.ttf');
+        font-weight: normal;
+		font-display: swap;
+    }
+}
+
+@tailwind utilities;
