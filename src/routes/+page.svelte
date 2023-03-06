@@ -89,7 +89,7 @@
 					<!-- create a window on click -->
 					<button
 						class="block w-full px-4 py-2 hover:bg-gray-100"
-						on:click={() => spawnWindow('/about', 'About Me')}>open</button
+						on:click={() => spawnWindow('about', 'About Me')}>open</button
 					>
 					<button class="block w-full px-4 py-2 hover:bg-gray-100" on:click={() => copyAboutMe()}
 						>copy to clipboard</button
@@ -160,7 +160,7 @@
 				>
 					<button
 						class="block w-full px-4 py-2 hover:bg-gray-100"
-						on:click={() => spawnWindow('/contact', 'contact me')}>open</button
+						on:click={() => spawnWindow('contact', 'contact me')}>open</button
 					>
 					<a class="block w-full px-4 py-2 hover:bg-gray-100" href="mailto:coming@soon.com"
 						>email me</a
@@ -191,25 +191,25 @@ background-size: 6px 6px;"
 	<button
 		class="m-5"
 		use:draggable={{ axis: 'both', bounds: 'parent' }}
-		on:dblclick={() => spawnWindow('/drawing', 'drawing')}
+		on:dblclick={() => spawnWindow('drawing', 'drawing')}
 	>
-		<img src="/images/drawing.png" alt="drawing" class="w-16 h-16 m-auto" />
+		<img src="images/drawing.png" alt="drawing" class="w-16 h-16 m-auto" />
 		<p class="bg-white text-center text-sm mt-2">drawing</p>
 	</button>
 	<button
 		class="m-5"
 		use:draggable={{ axis: 'both', bounds: 'parent' }}
-		on:dblclick={() => spawnWindow('/about', 'about me')}
+		on:dblclick={() => spawnWindow('about', 'about me')}
 	>
-		<img src="/images/mountain.png" alt="about me" class="w-16 h-16 m-auto" />
+		<img src="images/mountain.png" alt="about me" class="w-16 h-16 m-auto" />
 		<p class="bg-white text-center text-sm mt-2">about me</p>
 	</button>
 	<button
 		class="m-5"
 		use:draggable={{ axis: 'both', bounds: 'parent' }}
-		on:dblclick={() => spawnWindow('/contact', 'contact me')}
+		on:dblclick={() => spawnWindow('contact', 'contact me')}
 	>
-		<img src="/images/contact.png" alt="contact me" class="w-16 h-16 m-auto" />
+		<img src="images/contact.png" alt="contact me" class="w-16 h-16 m-auto" />
 		<p class="bg-white text-center text-sm mt-2">contact me</p>
 	</button>
 </div>
