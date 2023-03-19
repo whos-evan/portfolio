@@ -4,6 +4,7 @@
 
 	export let title = "";
 	export let content = "";
+	export let image = "";
 
 	let iframe;
 	let userWindow;
@@ -47,7 +48,7 @@
 <svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} />
 
 <div
-	class="userWindow absolute inline-block w-[300px] h-[200px] m-5 p-2 rounded-lg bg-white shadow-lg shadow-black"
+	class="userWindow absolute inline-block w-[250px] h-[200px] m-5 p-2 rounded-lg bg-white shadow-lg shadow-black"
 	bind:this={userWindow}
 	use:draggable={{ axis: "both", bounds: "parent" }}
 	on:mousedown={handleMouseDown}
@@ -77,6 +78,9 @@
 			<p>
 				{content}
 			</p>
+			{#if image}
+				<img class="m-auto w-10" src={image} alt={title} />
+			{/if}
 			<!-- ok button -->
 			<button
 				class="bg-[#5B5B5B] text-white font-bold mt-2 py-2 px-4 rounded"
