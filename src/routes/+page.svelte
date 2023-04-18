@@ -142,24 +142,24 @@
     audio.play();
 
     let listOfThingsToSay = [
-		"You are a loser",
-		"You have been trolled",
-		"We are engaging in a little bit of tomfoolery",
-		"Your computer has been hacked",
-		"Your computer is now mine",
-		"Your computer is now my property",
-		"I hope you enjoy this",
-		"Everything is going to be okay in the end",
-		"Do you like my new background color?"
-	]
-	// play text to speech
+      "You are a loser",
+      "You have been trolled",
+      "We are engaging in a little bit of tomfoolery",
+      "Your computer has been hacked",
+      "Your computer is now mine",
+      "Your computer is now my property",
+      "I hope you enjoy this",
+      "Everything is going to be okay in the end",
+      "Do you like my new background color?",
+    ];
+    // play text to speech
     for (let i = 0; i < 10; i++) {
-	
       let msg = new SpeechSynthesisUtterance();
-	  msg.text = listOfThingsToSay[Math.floor(Math.random() * listOfThingsToSay.length)];
+      msg.text =
+        listOfThingsToSay[Math.floor(Math.random() * listOfThingsToSay.length)];
 
       //   change the speed
-      msg.rate = 10
+      msg.rate = 10;
 
       //   change the pitch (higher pitch is higher)
       msg.pitch = 2;
@@ -167,8 +167,11 @@
       window.speechSynthesis.speak(msg);
     }
 
-	// open moistcritical's video
-	spawnWindow("https://youtube.com/embed/sjC9rxq0LMc?autoplay=1", "moistcritical");
+    // open moistcritical's video
+    spawnWindow(
+      "https://youtube.com/embed/sjC9rxq0LMc?autoplay=1",
+      "moistcritical"
+    );
   }
 
   let options: DragOptions = {
@@ -201,7 +204,7 @@
   class="font-pixeloid w-full h-10 border-solid border-2 border-black bg-white rounded-t-lg"
 >
   <div class="flex justify-center items-center h-full">
-    <a href="/" class="ml-5">Evan</a>
+    <a href="/" class="ml-5">evan</a>
     <div class="float-right w-full pl-5 gap-5 text-sm flex">
       <button class="relative" on:click={toggleAboutDropdown}>
         <span>about</span>
@@ -229,6 +232,15 @@
             class="block w-full px-4 py-2 hover:bg-gray-100"
             on:click={() => copyAboutMe()}>copy to clipboard</button
           >
+          <button class="block w-full px-4 py-2 hover:bg-gray-100">
+            <a
+              href="https://github.com/whos-evan"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open github
+            </a>
+          </button>
         </div>
       </button>
 
@@ -355,11 +367,7 @@
 <div
   id="content"
   class="font-pixeloid w-full flex flex-wrap items-start justify-start"
-  style="background-color: #ffffff;
-opacity: 0.8;
-background-image:  repeating-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000), repeating-linear-gradient(45deg, #000000 25%, #ffffff 25%, #ffffff 75%, #000000 75%, #000000);
-background-position: 0 0, 3px 3px;
-background-size: 6px 6px;
+  style="background-image: url('images/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
 height: calc(100vh - 40px);"
 >
   <!-- position it at the top left -->
